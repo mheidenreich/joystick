@@ -39,7 +39,7 @@ def read_ads7830(input):
 def no_drift(input):
         value = read_ads7830(input)
 
-        return value if value < 110 else 127 
+        return value if value < 110 or value > 140 else 127 
 
 def read_min(input):
     while True:
